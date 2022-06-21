@@ -25,10 +25,10 @@ export class TicketsController {
     return this.ticketsService.tickets();
   }
 
-  @Get()
-  async getTicket(id: number) {
+  @Get(':id')
+  async getTicket(@Param('id') id: number) {
     await randomDelay();
-    const ticket = await this.ticketsService.ticket(id);
+    const ticket = await this.ticketsService.ticket(+id);
     if (ticket) return ticket;
     throw new NotFoundException();
   }
@@ -42,13 +42,13 @@ export class TicketsController {
   @Put(':ticketId/assign/:userId')
   @HttpCode(204)
   async assignTicket(
-    @Param('ticketId') ticketId: string,
-    @Param('userId') userId: string
+      @Param('ticketId') ticketId: string,
+      @Param('userId') userId: string
   ) {
     await randomDelay();
     const success = await this.ticketsService.assign(
-      Number(ticketId),
-      Number(userId)
+        Number(ticketId),
+        Number(userId)
     );
     if (!success) throw new UnprocessableEntityException();
   }
