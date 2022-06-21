@@ -1,0 +1,4 @@
+const RANDOM_ERROR = false;
+const DEFAULT_TIMEOUT = 60 * 1000;
+
+export {RANDOM_ERROR, DEFAULT_TIMEOUT};
