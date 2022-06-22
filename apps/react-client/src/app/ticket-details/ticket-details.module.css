@@ -1,0 +1,11 @@
+.ticket-details {
+    box-shadow: var(--shadow);
+    max-width: 480px;
+    margin: 0 auto;
+    min-width: 320px;
+    width: 100%;
+    padding: 16px 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

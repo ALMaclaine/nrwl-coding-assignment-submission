@@ -1,2 +1,31 @@
 .tickets {
+    box-shadow: var(--shadow);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.ticket-row {
+    min-width: 320px;
+    width: 100%;
+    padding: 16px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ticket-row:hover {
+    background-color: #eee;
+}
+
+.no-tickets {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.controls {
+    box-shadow: var(--shadow);
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
 }

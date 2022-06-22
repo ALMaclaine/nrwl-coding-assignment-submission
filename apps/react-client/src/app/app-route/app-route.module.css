@@ -1,0 +1,19 @@
+.app {
+    padding: 32px;
+}
+
+.header {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+    font-size: 36px;
+}
+
+@media(max-width: 400px) {
+    .app {
+        padding: 0;
+    }
+}
